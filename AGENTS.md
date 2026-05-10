@@ -23,7 +23,7 @@ The following are **strictly prohibited**:
 - Blocking I/O (`requests`, synchronous HTTP clients) inside async functions.
 - Bypassing the auth middleware.
 
-### 1.2 Forbidden — Security
+### 1.2 Security Rules
 
 Follow the [OWASP Top 10](https://owasp.org/www-project-top-10/) for every piece of code written:
 
@@ -36,7 +36,7 @@ Follow the [OWASP Top 10](https://owasp.org/www-project-top-10/) for every piece
 - Log at structured JSON level. Strip PII before logging.
 - Validate all outbound tool URLs against an allowlist. Disallow `file://`, `gopher://`, `dict://` schemes.
 
-### 1.3 Forbidden — Git Operations
+### 1.3 Git Operations
 
 - **Never rebase under any circumstance without explicit agreement from the user.** Never assume your decision is correct.
 - Never force push.
@@ -156,7 +156,16 @@ chore: pin all dependencies in pyproject.toml
 ### 5.2 Branching
 
 - Main branch is `main`.
-- Feature branches: `feat/<short-desc>`. Bug fixes: `fix/<short-desc>`.
+- Feature branches: `feat/<short-desc>` or `fix/<short-desc>`.
+- Never commit directly to `main`. Always create a feature branch first, then open a PR targeting `main`.
+
+### 5.2.1 Agent Workflow
+
+When auditing or modifying AGENTS.md (or any file):
+1. Create a feature branch: `git checkout -b docs/<short-desc>` (or `feat/`, `fix/`).
+2. Make changes and commit on the feature branch.
+3. Push the feature branch and open a PR with `gh pr create --base main`.
+4. Never commit or push directly to `main` or `master`.
 
 ### 5.3 Code Review
 
