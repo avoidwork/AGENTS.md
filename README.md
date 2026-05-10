@@ -16,7 +16,7 @@ This starter file provides:
 
 - **Security guards** — forbidden patterns (no `eval`, no hardcoded secrets, OWASP
   Top 10 awareness).
-- **Coding standards** — Python style, FastAPI conventions, LangGraph patterns.
+- **Coding standards** — an example of Python style, FastAPI conventions, LangGraph patterns. Replace with your language/toolchain.
 - **Git workflow** — conventional commits, no force-push, no rebase without agreement.
 - **Operational rules** — 100% coverage, pre-commit hooks, mocking guidelines.
 
@@ -25,14 +25,18 @@ This starter file provides:
 Edit `AGENTS.md` directly. Add sections, tighten rules, or bake in project-specific
 conventions. Agents reading the file will follow whatever is written there.
 
+Replace the language-specific examples (sections 3–4) with the conventions for your
+project's stack. Keep the security rules, git conventions, and operational rules as a
+solid default — they apply regardless of language.
+
 ## Structure
 
 | Section | Purpose |
 |---------|---------|
 | `1. Core Rules` | Forbidden patterns, security mandates, core principles (DRY, KISS, YAGNI) |
 | `2. Project Context` | Description, layout, quick commands |
-| `3. Python Conventions` | Tooling, style, error handling, async, testing |
-| `4. Framework Conventions` | FastAPI, LangGraph, auth modes |
+| `3. Python Conventions` | Example — tooling, style, error handling, async, testing (adapt for your language) |
+| `4. Framework Conventions` | Example — FastAPI, LangGraph, auth modes (adapt for your frameworks) |
 | `5. Git Conventions` | Commits, branching, review |
 | `6. Operational Rules` | Coverage, pre-commit, mocking gotchas |
 | `7. Session Learnings` | Codebase-specific discoveries |
