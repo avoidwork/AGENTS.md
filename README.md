@@ -25,8 +25,8 @@ This starter file provides:
 Edit `AGENTS.md` directly. Add sections, tighten rules, or bake in project-specific
 conventions. Agents reading the file will follow whatever is written there.
 
-Replace the language-specific examples (sections 3–4, 8) with the conventions for your
-project's stack. Keep the security rules, git conventions, and operational rules as a
+Replace the language-specific examples (sections 1, 3–4, 8) with the conventions for
+your project's stack. Keep the security rules, git conventions, and operational rules as a
 solid default — they apply regardless of language.
 
 ## Structure
