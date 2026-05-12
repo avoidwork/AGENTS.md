@@ -174,6 +174,10 @@ When auditing or modifying AGENTS.md (or any file):
 - No merging without passing CI (lint → type-check → test).
 - PR descriptions must reference related items from design documents.
 
+### 5.4 Pull Request Templates
+
+If a `.github/PULL_REQUEST_TEMPLATE.md` file exists, it MUST be used when creating PRs. Fill out every section — do not leave any section blank. If a section does not apply, write `N/A` rather than skipping it.
+
 ---
 
 ## 6. Operational Rules
