@@ -5,6 +5,15 @@ that you and your agents can easily extend.
 
 ---
 
+## Quick start
+
+Prompt:
+```
+Read https://raw.githubusercontent.com/avoidwork/AGENTS.md/refs/heads/main/AGENTS.md and update @AGENTS.md so that the structure of the retrieved file is applied to @AGENTS.md
+```
+
+---
+
 ## What is this?
 
 `AGENTS.md` is a convention file placed at the root of a project that defines rules,
