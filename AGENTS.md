@@ -39,6 +39,7 @@ Follow the [OWASP Top 10](https://owasp.org/www-project-top-10/) for every piece
 ### 1.3 Git Operations
 
 - **Never rebase under any circumstance without explicit agreement from the user.** Never assume your decision is correct.
+- **Never amend a commit.** Use additional commits instead.
 - Never force push.
 
 ### 1.4 Core Principles
