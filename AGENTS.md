@@ -47,6 +47,7 @@ Follow the [OWASP Top 10](https://owasp.org/www-project-top-10/) for every piece
 - **DRY**: Extract repeated logic into functions, classes, or utilities. Centralize configuration in `config.py`. Reuse SSE envelope formatter, error handler, and auth middleware across endpoints. No copy-paste code blocks greater than three lines.
 - **KISS**: Prefer simple, readable code over clever solutions. If a solution requires more than three levels of indentation or a helper function with more than 10 lines, reconsider it.
 - **YAGNI**: Do NOT build features, abstractions, or configurations not required by the current spec. No generic "future-proof" wrappers. Ad-hoc solutions are acceptable as long as they serve a present requirement.
+- **No Unneeded Refactoring**: Do not refactor working code for style, naming, or structure unless it directly addresses a bug, improves performance, or is required by the current spec. Refactoring without a clear purpose wastes time and introduces risk.
 - **Single Responsibility**: Each module, class, and function must have one reason to change.
 - **Open/Closed**: Extend via composition — not by modifying existing logic.
 - **Dependency Inversion**: Depend on abstractions (protocols / ABCs) for external services. Inject implementations.
