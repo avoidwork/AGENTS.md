@@ -82,13 +82,13 @@ Misc details here.
 - **Package manager**: `uv` — the **only** supported package manager. Never use `pip`.
 - **Type checking**: `mypy` (strict mode)
 - **Formatting**: `black` (line-length 88), **isort** (profile: `black`)
-- **Linting**: `pylint` (defaults + mads-specific disables in `pyproject.toml`)
+- **Linting**: `pylint` (defaults + project-specific disables in `pyproject.toml`)
 - **Testing**: `pytest` + `pytest-asyncio`
 - **Git hooks**: `pre-commit` (manages isort, black, pylint, mypy)
 
 ### 3.2 Style
 
-- Use 2 spaces for indentation. No tabs. Maximum line length: 100 characters.
+- Use 2 spaces for indentation. No tabs. Maximum line length: 88 characters (matches `black`).
 - Follow [PEP 8](https://peps.python.org/pep-0008/) and [PEP 484](https://peps.python.org/pep-0484/).
 - All public functions and classes MUST have type hints and a docstring (Google or Sphinx style).
 - Private functions prefixed with `_`.
@@ -96,7 +96,7 @@ Misc details here.
 
 ### 3.3 Error Handling
 
-- Raise typed exceptions. Define domain-specific exceptions in `mads/errors.py`.
+- Raise typed exceptions. Define domain-specific exceptions in `<project>/errors.py`.
 - Catch at the boundary (FastAPI exception handler), not inside logic.
 - Never swallow exceptions silently.
 
@@ -196,7 +196,7 @@ The pre-commit hook enforces **100% code coverage** via `coverage report --fail-
 
 ### 6.2 Pre-commit Hook and coverage.txt
 
-The `cover` pre-commit hook runs tests then regenerates `coverage.txt`. If the hook modifies a staged file, `git commit` fails. Always `git add -A` and `git commit --amend -C HEAD` after a failed commit from a modified `coverage.txt`.
+The `cover` pre-commit hook runs tests then regenerates `coverage.txt`. If the hook modifies a staged file, `git commit` fails. Do not amend to fix it — §1.3 forbids amending outright. Add a follow-up commit instead.
 
 ### 6.3 Pre-commit Runs Tests
 
@@ -266,7 +266,7 @@ The `README.md` may show a more up-to-date project structure (e.g., additional m
 - [ ] Unit tests written and passing.
 - [ ] Integration tests for API endpoints.
 - [ ] `pylint`, `isort`, `black`, and `mypy` pass via pre-commit hooks.
-- [ ] `mypy` or `pyright` reports zero errors on changed files.
+- [ ] `mypy` reports zero errors on changed files.
 - [ ] No hardcoded secrets or credentials introduced.
 - [ ] Environment variable configuration used (no config file logic).
 - [ ] 100% code coverage maintained (pre-commit will enforce this).
