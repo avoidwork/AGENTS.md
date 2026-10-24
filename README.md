@@ -9,7 +9,7 @@ that you and your agents can easily extend.
 
 Prompt:
 ```
-Read https://raw.githubusercontent.com/avoidwork/AGENTS.md/refs/heads/main/AGENTS.md and update AGENTS.md so that the structure of the retrieved file is applied to AGENTS.md
+Read https://raw.githubusercontent.com/avoidwork/AGENTS.md/refs/heads/main/AGENTS.md and create or update AGENTS.md so that the structure of the retrieved file is applied to AGENTS.md
 ```
 
 ---
