@@ -41,6 +41,7 @@ Follow the [OWASP Top 10](https://owasp.org/www-project-top-10/) for every piece
 - **Never rebase under any circumstance without explicit agreement from the user.** Never assume your decision is correct.
 - **Never amend a commit.** Use additional commits instead.
 - Never force push.
+- **Skill execution is implied authorization.** When a skill is executing — standalone or as part of a chained workflow — the skill's own directives constitute the user's authorization for the git operations it performs (staging, committing, pushing, and opening a PR on the branch it created). Do not halt to request explicit agreement for these. The prohibitions above (rebase, amend, force-push) still apply and are never implied by skill execution.
 
 ### 1.4 Core Principles
 
